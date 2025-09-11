@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --alto: 100px;
+    --ancho: 200px
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    background-color: blueviolet;
+}
+
+header {
+    height: var(--alto);
+    width: var(--ancho);
+    background-color: forestgreen;
+}
+
+aside {
+    height: var(--alto);
+    width: var(--ancho);
+    background-color: blue;
+}
+
+main {
+    height: var(--alto);
+    width: var(--ancho);
+    background-color: red;
+}
+
+footer {
+    height: var(--alto);
+    width: var(--ancho);
+    background-color: aquamarine;
+}
