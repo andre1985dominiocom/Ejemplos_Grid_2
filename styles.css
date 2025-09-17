@@ -58,3 +58,24 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* 📱 Diseño responsivo para móviles */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Solo una columna */
+        grid-template-rows: auto auto 1fr auto; /* Se apilan */
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer";
+    }
+
+    aside {
+        height: 80px; /* Más pequeño en móviles */
+    }
+
+    header, main, footer {
+        height: auto; /* Que se ajusten automáticamente */
+    }
+}
