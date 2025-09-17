@@ -1,45 +1,60 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --alto: 100px;
-    --ancho: 200px
+html, body {
+    height: 100%;
 }
 
+/* Definimos la grilla principal */
 body {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "header header"
-    "aside main"
-    "footer footer";
-    background-color: blueviolet;
+    grid-template-columns: 200px 1fr;   /* aside fijo + main flexible */
+    grid-template-rows: 100px 1fr 80px; /* header fijo, contenido flexible, footer fijo */
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    height: 100vh; /* Toda la pantalla */
+    font-family: Arial, sans-serif;
 }
 
+/* Áreas del grid */
 header {
-    height: var(--alto);
-    width: var(--ancho);
-    background-color: forestgreen;
+    grid-area: header;
+    background: forestgreen;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 aside {
-    height: var(--alto);
-    width: var(--ancho);
-    background-color: blue;
+    grid-area: aside;
+    background: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-    height: var(--alto);
-    width: var(--ancho);
-    background-color: red;
+    grid-area: main;
+    background: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
-    height: var(--alto);
-    width: var(--ancho);
-    background-color: aquamarine;
+    grid-area: footer;
+    background: rgb(255, 127, 202);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
